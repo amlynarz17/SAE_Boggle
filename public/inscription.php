@@ -17,8 +17,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ->execute([$pseudo, $email, password_hash($mdp, PASSWORD_DEFAULT)]);
             header('Location: /connexion.php?ok=1'); exit;
         } catch (PDOException $e) {
-            $erreurs[] = "Impossible de créer le compte avec ces informations.";
-        }
+    error_log('Inscription : ' . $e->getMessage());
+    if ($e->getCode() === '23505') {
+        $erreurs[] = "Impossible de créer le compte avec ces informations.";
+    } else {
+        $erreurs[] = "Erreur technique, réessayez plus tard.";
+    }
+}
     }
 }
 ?>
