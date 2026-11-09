@@ -1,6 +1,6 @@
 <?php
 $lettres = ['A','C','L','E','R','C','U','S','P','E','M','T','O','R','I','L'];
-$actives = [0,1,5,6,9,10,14,15];
+$actives = [0,1,5,6,9,14,15];
 ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
