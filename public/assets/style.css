@@ -1,0 +1,31 @@
+:root{--menthe:#b9fcc9;--orange:#f47b20;--brun:#7a3f0a;--bleu:#0a0ab4;--creme:#ffe3a3;--violet:#6c6cf5;--marine:#1a1a8c;--texte:#1d1d3a;--rouge:#c4271b}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{font-family:"Nunito",system-ui,sans-serif;color:var(--texte);background:#fff}
+.page{display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
+.gauche{background:var(--menthe);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2rem;padding:2rem;text-align:center}
+.logo{font-family:"Lilita One",Impact,sans-serif;font-size:clamp(3rem,7vw,5.5rem);margin:0;line-height:1;letter-spacing:.02em;color:var(--orange);-webkit-text-stroke:3px var(--brun);paint-order:stroke fill;text-shadow:0 5px 0 var(--brun)}
+.plateau{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;background:var(--brun);padding:8px;border-radius:6px;width:min(300px,70%);aspect-ratio:1}
+.de{display:flex;align-items:center;justify-content:center;background:var(--creme);color:#fff;font-family:"Lilita One",Impact,sans-serif;font-size:clamp(1.4rem,3.4vw,2.4rem);border-radius:3px;-webkit-text-stroke:1px var(--brun);paint-order:stroke fill}
+.de.on{background:var(--bleu)}
+.slogan{font-family:"Lilita One",Impact,sans-serif;color:var(--brun);font-size:1.15rem;margin:0}
+.sous-slogan{margin:0;font-size:.85rem;max-width:22ch}
+.droite{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:2rem}
+.droite::before{content:"";position:absolute;top:-12%;right:-10%;width:60%;aspect-ratio:1;background:var(--menthe);border-radius:50%;z-index:0}
+.contenu{position:relative;z-index:1;width:min(360px,100%);display:flex;flex-direction:column;gap:.8rem}
+.btn{display:block;width:100%;text-align:center;font:700 1.05rem "Nunito",sans-serif;padding:.8rem 1rem;border-radius:999px;text-decoration:none;cursor:pointer;border:2px solid var(--marine);background:var(--violet);color:#fff}
+.btn.contour{background:#fff;color:var(--violet);border-color:var(--violet)}
+.btn:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--marine);outline-offset:2px}
+.retour{position:absolute;top:1.2rem;left:1.5rem;z-index:1;font-size:.8rem;color:var(--marine);text-decoration:none}
+h2{font-family:"Lilita One",Impact,sans-serif;color:var(--marine);font-size:2rem;margin:0}
+.intro{margin:0 0 .5rem;color:#555;font-size:.9rem}
+label{font-weight:700;font-size:.85rem}
+input[type=text],input[type=email],input[type=password]{width:100%;padding:.7rem .8rem;margin:.25rem 0 .5rem;border:1px solid #cfd2e6;border-radius:8px;font:inherit;background:#fff}
+.aide{font-size:.75rem;color:#666;margin:-.3rem 0 .5rem}
+.erreur{background:#fde8e6;color:var(--rouge);border-radius:8px;padding:.6rem .8rem;font-size:.85rem;margin:0}
+.succes{background:#e3fbe9;color:#17612a;border-radius:8px;padding:.6rem .8rem;font-size:.85rem;margin:0}
+.pied{text-align:center;font-size:.85rem;margin:.3rem 0 0}
+.pied a,.lien{color:var(--marine);font-weight:700}
+.ligne{display:flex;justify-content:flex-end;font-size:.8rem;margin:-.2rem 0 .3rem}
+.cgu{display:flex;gap:.5rem;align-items:flex-start;font-weight:400;font-size:.8rem;margin-bottom:.5rem}
+@media(max-width:800px){.page{grid-template-columns:1fr}.gauche{padding:1.5rem 1rem}.droite{padding:2rem 1rem 3rem}.plateau{width:200px}.sous-slogan{display:none}}
